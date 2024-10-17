@@ -40,9 +40,9 @@ profiles:
     url: https://medium.com/@carson.kohlbrenner
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Robotics
+  - Embodied AI
+  - Whole Body Tactile Sensing
 
 education:
   - area: PhD Artificial Intelligence
