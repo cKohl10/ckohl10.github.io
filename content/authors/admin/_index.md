@@ -1,9 +1,9 @@
 ---
 # Display name
-# title: Carson Kohlbrenner
+title: Carson Kohlbrenner
 
 # Name pronunciation (optional)
-name_pronunciation: Carson Kohlbrenner
+#name_pronunciation: Carson Kohlbrenner
 
 # Full name (for SEO)
 first_name: Carson
