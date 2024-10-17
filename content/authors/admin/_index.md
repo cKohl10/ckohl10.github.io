@@ -30,13 +30,13 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'carson.kohlbrenner@gmail.com'
+    url: 'mailto:carson.kohlbrenner@gmail.com'
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/ckohl10
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/carson-kohlbrenner-98658b206/
-  - icon: assets/media/icons/medium-icon.svg
+  - icon: medium-icon
     url: https://medium.com/@carson.kohlbrenner
 
 interests:
