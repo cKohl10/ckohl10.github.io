@@ -1,6 +1,6 @@
 ---
 # Display name
-#title: Carson Kohlbrenner
+title: Carson Kohlbrenner
 
 # Name pronunciation (optional)
 #name_pronunciation: Carson Kohlbrenner
