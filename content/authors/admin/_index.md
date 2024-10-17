@@ -40,7 +40,7 @@ profiles:
   #   url: https://medium.com/@carson.kohlbrenner
 
 interests:
-  - Robotics
+  - Robotics 2
   - Embodied AI
   - Whole Body Tactile Sensing
 
