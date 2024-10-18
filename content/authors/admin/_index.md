@@ -10,8 +10,8 @@ first_name: Carson
 last_name: Kohlbrenner
 
 # Status emoji
-status:
-  icon: 🤖
+# status:
+#   icon: 🤖
 
 # Is this the primary user of the site?
 superuser: true
@@ -36,7 +36,7 @@ profiles:
     url: https://github.com/ckohl10
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/carson-kohlbrenner-98658b206/
-  - icon: medium-icon
+  - icon: custom/medium-icon
     url: https://medium.com/@carson.kohlbrenner
 
 interests:
