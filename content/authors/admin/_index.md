@@ -36,7 +36,7 @@ profiles:
     url: https://github.com/ckohl10
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/carson-kohlbrenner-98658b206/
-  - icon: custom/medium-icon
+  - icon: "custom/medium-icon"
     url: https://medium.com/@carson.kohlbrenner
 
 interests:
