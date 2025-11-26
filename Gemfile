@@ -5,7 +5,7 @@ gem "jekyll", "~> 4.3"
 
 # GitHub Pages compatible (if deploying to GitHub Pages)
 # Uncomment the line below and comment out the jekyll gem above if using GitHub Pages
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 # Plugins
 group :jekyll_plugins do
