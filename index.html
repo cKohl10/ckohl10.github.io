@@ -38,31 +38,17 @@ title: Carson Kohlbrenner
         </tr>
       </tbody></table>
 
-      <!-- Publications Section -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Publications</h2>
-          </td>
-        </tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% for paper in site.data.papers %}
-          {% include paper.html paper=paper %}
-        {% endfor %}
-      </tbody></table>
-
       <!-- Impacts/News Section -->
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
+          <td style="padding:20px 20px 0 20px;width:100%;vertical-align:middle">
             <h2>Impacts</h2>
           </td>
         </tr>
       </tbody></table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
+          <td style="padding:0 20px 20px 20px;width:100%;vertical-align:middle">
             <div class="impacts-reel" aria-live="polite">
               <div class="impacts-viewport">
                 <div class="impacts-timeline"></div>
@@ -93,7 +79,7 @@ title: Carson Kohlbrenner
                 if (prefersReducedMotion || items.length <= 1) return;
 
                 var totalItems = items.length;
-                var currentIndex = 0;
+                var currentIndex = 1; // Start at second element
                 var direction = 1; // 1 = forward, -1 = backward
                 var intervalId = null;
 
@@ -180,6 +166,20 @@ title: Carson Kohlbrenner
             </script>
           </td>
         </tr>
+      </tbody></table>
+
+      <!-- Publications Section -->
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:20px;width:100%;vertical-align:middle">
+            <h2>Publications</h2>
+          </td>
+        </tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        {% for paper in site.data.papers %}
+          {% include paper.html paper=paper %}
+        {% endfor %}
       </tbody></table>
 
       <!-- Projects Section -->

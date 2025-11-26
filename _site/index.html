@@ -44,6 +44,202 @@
         </tr>
       </tbody></table>
 
+      <!-- Impacts/News Section -->
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:20px 20px 0 20px;width:100%;vertical-align:middle">
+            <h2>Impacts</h2>
+          </td>
+        </tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:0 20px 20px 20px;width:100%;vertical-align:middle">
+            <div class="impacts-reel" aria-live="polite">
+              <div class="impacts-viewport">
+                <div class="impacts-timeline"></div>
+                <div class="impacts-track">
+                  
+                    <div class="impact-item">
+  <div class="impact-date">2025</div>
+  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="imgs/news/RMAIIG2025/cover.jpg" alt="Live Demo of Collision Avoidance with Proximity Sensing at RMAIIG 2025" class="impact-image">
+        <div class="impact-overlay">
+          <p>I presented my research on collision avoidance with proximity sensing at the RMAIIG 2025</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">Live Demo<span>RMAIIG 2025, Boulder, Colorado</span></figcaption>
+    </figure>
+  </a>
+</div>
+
+
+                  
+                    <div class="impact-item">
+  <div class="impact-date">2025</div>
+  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="imgs/news/presentations/alessandro_tenure_talk_edit.png" alt="Live Demo at Dr. Roncone's Tenure Talk" class="impact-image">
+        <div class="impact-overlay">
+          <p>I operated a live collision avoidance demo with proximity sensing at Dr. Roncone's tenure talk!</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">Live Demo<span>Dr. Roncone's Tenure Talk, University of Colorado Boulder</span></figcaption>
+    </figure>
+  </a>
+</div>
+
+
+                  
+                    <div class="impact-item">
+  <div class="impact-date">2025</div>
+  <a class="impact-link" href="https://x.com/adcock_brett/status/1941891039330988359" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="imgs/news/posts/brett_x.png" alt="Community Recognition: Brett Adcock, X" class="impact-image">
+        <div class="impact-overlay">
+          <p>Brett Adcock shared my research on collision avoidance with proximity sensing on his X!</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">Community Recognition (X)<span>Brett Adcock, Founder and CEO of Figure AI</span></figcaption>
+    </figure>
+  </a>
+</div>
+
+
+                  
+                    <div class="impact-item">
+  <div class="impact-date">2025</div>
+  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="imgs/news/ICRA2025/presentation_edit.png" alt="Paper Presentation at International Conference on Robotics and Automation (ICRA) 2025" class="impact-image">
+        <div class="impact-overlay">
+          <p>I presented my research on tactile sensors generation at the ICRA!</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">Paper Presentation<span>International Conference on Robotics and Automation (ICRA) 2025, Atlanta, Georgia</span></figcaption>
+    </figure>
+  </a>
+</div>
+
+
+                  
+                </div>
+                <div class="impacts-nav" aria-hidden="false">
+                  <button class="impacts-button impacts-button--prev" aria-label="Previous">
+                    &#9664;
+                  </button>
+                  <button class="impacts-button impacts-button--next" aria-label="Next">
+                    &#9654;
+                  </button>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              (function() {
+                var viewport = document.querySelector('.impacts-viewport');
+                if (!viewport) return;
+                var track = viewport.querySelector('.impacts-track');
+                var prevBtn = viewport.querySelector('.impacts-button--prev');
+                var nextBtn = viewport.querySelector('.impacts-button--next');
+                var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var items = Array.prototype.slice.call(track.querySelectorAll('.impact-item'));
+                if (prefersReducedMotion || items.length <= 1) return;
+
+                var totalItems = items.length;
+                var currentIndex = 1; // Start at second element
+                var direction = 1; // 1 = forward, -1 = backward
+                var intervalId = null;
+
+                // Get CSS values dynamically for responsive support
+                function getItemWidth() {
+                  // Use offsetWidth to get layout width (unaffected by scale transform)
+                  return items[0] ? items[0].offsetWidth : 200;
+                }
+
+                function getGap() {
+                  // Check if mobile breakpoint (matches CSS @media max-width: 600px)
+                  return window.innerWidth <= 600 ? 16 : 24;
+                }
+
+                function stepWidth() {
+                  return getItemWidth() + getGap();
+                }
+
+                function centerOffset() {
+                  var viewportWidth = viewport.getBoundingClientRect().width;
+                  return (viewportWidth - getItemWidth()) / 2;
+                }
+
+                function updateActiveClasses() {
+                  items.forEach(function(item, idx) {
+                    item.classList.remove('is-active', 'is-side');
+                    if (idx === currentIndex) {
+                      item.classList.add('is-active');
+                    } else if (idx === currentIndex - 1 || idx === currentIndex + 1) {
+                      item.classList.add('is-side');
+                    }
+                  });
+                }
+
+                function goTo(index) {
+                  var offset = centerOffset() - (index * stepWidth());
+                  track.style.transform = 'translateX(' + offset + 'px)';
+                  updateActiveClasses();
+                }
+
+                function advance() {
+                  // Move in current direction
+                  currentIndex += direction;
+                  
+                  // Reverse direction at boundaries
+                  if (currentIndex >= totalItems - 1) {
+                    currentIndex = totalItems - 1;
+                    direction = -1;
+                  } else if (currentIndex <= 0) {
+                    currentIndex = 0;
+                    direction = 1;
+                  }
+                  
+                  goTo(currentIndex);
+                }
+
+                function next() {
+                  if (currentIndex < totalItems - 1) {
+                    currentIndex += 1;
+                    goTo(currentIndex);
+                  }
+                }
+                
+                function prev() {
+                  if (currentIndex > 0) {
+                    currentIndex -= 1;
+                    goTo(currentIndex);
+                  }
+                }
+
+                function startAuto() { intervalId = setInterval(advance, 5000); }
+                function stopAuto() { if (intervalId) { clearInterval(intervalId); intervalId = null; } }
+
+                nextBtn.addEventListener('click', function() { stopAuto(); next(); direction = 1; startAuto(); });
+                prevBtn.addEventListener('click', function() { stopAuto(); prev(); direction = -1; startAuto(); });
+
+                // keep alignment correct on resize
+                window.addEventListener('resize', function() { goTo(currentIndex); });
+
+                // Initial setup
+                goTo(currentIndex);
+                startAuto();
+              })();
+            </script>
+          </td>
+        </tr>
+      </tbody></table>
+
       <!-- Publications Section -->
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
@@ -214,202 +410,6 @@
 
 
         
-      </tbody></table>
-
-      <!-- Impacts/News Section -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Impacts</h2>
-          </td>
-        </tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <div class="impacts-reel" aria-live="polite">
-              <div class="impacts-viewport">
-                <div class="impacts-timeline"></div>
-                <div class="impacts-track">
-                  
-                    <div class="impact-item">
-  <div class="impact-date">2025</div>
-  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
-    <figure class="impact-card">
-      <div class="impact-image-wrapper" tabindex="0">
-        <img src="imgs/news/RMAIIG2025/cover.jpg" alt="Live Demo of Collision Avoidance with Proximity Sensing at RMAIIG 2025" class="impact-image">
-        <div class="impact-overlay">
-          <p>I presented my research on collision avoidance with proximity sensing at the RMAIIG 2025</p>
-        </div>
-      </div>
-      <figcaption class="impact-title">Live Demo<span>RMAIIG 2025, Boulder, Colorado</span></figcaption>
-    </figure>
-  </a>
-</div>
-
-
-                  
-                    <div class="impact-item">
-  <div class="impact-date">2025</div>
-  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
-    <figure class="impact-card">
-      <div class="impact-image-wrapper" tabindex="0">
-        <img src="imgs/news/presentations/alessandro_tenure_talk_edit.png" alt="Live Demo at Dr. Roncone's Tenure Talk" class="impact-image">
-        <div class="impact-overlay">
-          <p>I operated a live collision avoidance demo with proximity sensing at Dr. Roncone's tenure talk!</p>
-        </div>
-      </div>
-      <figcaption class="impact-title">Live Demo<span>Dr. Roncone's Tenure Talk, University of Colorado Boulder</span></figcaption>
-    </figure>
-  </a>
-</div>
-
-
-                  
-                    <div class="impact-item">
-  <div class="impact-date">2025</div>
-  <a class="impact-link" href="https://x.com/adcock_brett/status/1941891039330988359" target="_blank" rel="noopener noreferrer">
-    <figure class="impact-card">
-      <div class="impact-image-wrapper" tabindex="0">
-        <img src="imgs/news/posts/brett_x.png" alt="Community Recognition: Brett Adcock, X" class="impact-image">
-        <div class="impact-overlay">
-          <p>Brett Adcock shared my research on collision avoidance with proximity sensing on his X!</p>
-        </div>
-      </div>
-      <figcaption class="impact-title">Community Recognition (X)<span>Brett Adcock, Founder and CEO of Figure AI</span></figcaption>
-    </figure>
-  </a>
-</div>
-
-
-                  
-                    <div class="impact-item">
-  <div class="impact-date">2025</div>
-  <a class="impact-link" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
-    <figure class="impact-card">
-      <div class="impact-image-wrapper" tabindex="0">
-        <img src="imgs/news/ICRA2025/presentation_edit.png" alt="Paper Presentation at International Conference on Robotics and Automation (ICRA) 2025" class="impact-image">
-        <div class="impact-overlay">
-          <p>I presented my research on tactile sensors generation at the ICRA!</p>
-        </div>
-      </div>
-      <figcaption class="impact-title">Paper Presentation<span>International Conference on Robotics and Automation (ICRA) 2025, Atlanta, Georgia</span></figcaption>
-    </figure>
-  </a>
-</div>
-
-
-                  
-                </div>
-                <div class="impacts-nav" aria-hidden="false">
-                  <button class="impacts-button impacts-button--prev" aria-label="Previous">
-                    &#9664;
-                  </button>
-                  <button class="impacts-button impacts-button--next" aria-label="Next">
-                    &#9654;
-                  </button>
-                </div>
-              </div>
-            </div>
-            <script type="text/javascript">
-              (function() {
-                var viewport = document.querySelector('.impacts-viewport');
-                if (!viewport) return;
-                var track = viewport.querySelector('.impacts-track');
-                var prevBtn = viewport.querySelector('.impacts-button--prev');
-                var nextBtn = viewport.querySelector('.impacts-button--next');
-                var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                var items = Array.prototype.slice.call(track.querySelectorAll('.impact-item'));
-                if (prefersReducedMotion || items.length <= 1) return;
-
-                var totalItems = items.length;
-                var currentIndex = 0;
-                var direction = 1; // 1 = forward, -1 = backward
-                var intervalId = null;
-
-                // Get CSS values dynamically for responsive support
-                function getItemWidth() {
-                  // Use offsetWidth to get layout width (unaffected by scale transform)
-                  return items[0] ? items[0].offsetWidth : 200;
-                }
-
-                function getGap() {
-                  // Check if mobile breakpoint (matches CSS @media max-width: 600px)
-                  return window.innerWidth <= 600 ? 16 : 24;
-                }
-
-                function stepWidth() {
-                  return getItemWidth() + getGap();
-                }
-
-                function centerOffset() {
-                  var viewportWidth = viewport.getBoundingClientRect().width;
-                  return (viewportWidth - getItemWidth()) / 2;
-                }
-
-                function updateActiveClasses() {
-                  items.forEach(function(item, idx) {
-                    item.classList.remove('is-active', 'is-side');
-                    if (idx === currentIndex) {
-                      item.classList.add('is-active');
-                    } else if (idx === currentIndex - 1 || idx === currentIndex + 1) {
-                      item.classList.add('is-side');
-                    }
-                  });
-                }
-
-                function goTo(index) {
-                  var offset = centerOffset() - (index * stepWidth());
-                  track.style.transform = 'translateX(' + offset + 'px)';
-                  updateActiveClasses();
-                }
-
-                function advance() {
-                  // Move in current direction
-                  currentIndex += direction;
-                  
-                  // Reverse direction at boundaries
-                  if (currentIndex >= totalItems - 1) {
-                    currentIndex = totalItems - 1;
-                    direction = -1;
-                  } else if (currentIndex <= 0) {
-                    currentIndex = 0;
-                    direction = 1;
-                  }
-                  
-                  goTo(currentIndex);
-                }
-
-                function next() {
-                  if (currentIndex < totalItems - 1) {
-                    currentIndex += 1;
-                    goTo(currentIndex);
-                  }
-                }
-                
-                function prev() {
-                  if (currentIndex > 0) {
-                    currentIndex -= 1;
-                    goTo(currentIndex);
-                  }
-                }
-
-                function startAuto() { intervalId = setInterval(advance, 5000); }
-                function stopAuto() { if (intervalId) { clearInterval(intervalId); intervalId = null; } }
-
-                nextBtn.addEventListener('click', function() { stopAuto(); next(); direction = 1; startAuto(); });
-                prevBtn.addEventListener('click', function() { stopAuto(); prev(); direction = -1; startAuto(); });
-
-                // keep alignment correct on resize
-                window.addEventListener('resize', function() { goTo(currentIndex); });
-
-                // Initial setup
-                goTo(currentIndex);
-                startAuto();
-              })();
-            </script>
-          </td>
-        </tr>
       </tbody></table>
 
       <!-- Projects Section -->

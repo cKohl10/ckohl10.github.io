@@ -142,7 +142,7 @@ span.highlight {
 .impacts-viewport {
   position: relative;
   overflow: hidden;
-  padding-top: 36px;
+  padding-top: 24px;
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -162,7 +162,7 @@ span.highlight {
   position: absolute;
   left: 0;
   right: 0;
-  top: 18px;
+  top: 12px;
   height: 1px;
   background: #eaeaea;
   z-index: 0;
@@ -235,7 +235,7 @@ span.highlight {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  top: -18px;
+  top: -12px;
   background: #ffffff;
   color: #505050;
   padding: 2px 8px;
