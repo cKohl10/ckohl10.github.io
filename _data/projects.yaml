@@ -1,0 +1,87 @@
+# Projects
+# Add new projects at the top of this list (most recent first)
+# Required fields: id, title, authors, context, year, image
+# Optional fields: project_page, code, paper, article, description
+
+- id: clip
+  title: "Training CLIP to Recognize Objects with Tactile Sensors"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Nikolaus Correll
+      url: https://www.colorado.edu/cs/nikolaus-correll
+  context: "Transformer Based Robotic AI"
+  year: 2024
+  image: imgs/projects/clip/cover_image.png
+  article: https://medium.com/correll-lab/training-clip-to-recognize-objects-with-tactile-sensors-8e4f480027a3
+  code: https://colab.research.google.com/drive/1iYD2WDOGnPQSRmr0qXOLSl3eMh7S1IXt?usp=sharing
+  description: "A step-by-step guide to training vision transformers to recognize objects with tactile sensors using contrastive learning."
+
+- id: rocket
+  title: "Self-Landing Rocket using Deep Reinforcement Learning"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Owen Craig
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Thomas Dunnington
+      url: https://github.com/dunningtonthomas
+  context: "Decision Making Under Uncertainty Final Project"
+  year: 2024
+  image: imgs/projects/rocket/cover_image.png
+  paper: data_new/Self_Landing_Rocket_Paper.pdf
+  code: https://github.com/cKohl10/Self_Landing_Rocket
+  description: "Deep Q-network, behavior cloning, and heuristic PID control methods for safely landing a rocket on a platform are implemented and compared."
+
+- id: alligatr
+  title: "Autonomous Localization for GPS-denied Aerial Tracking and Reconnaissance (ALLIGATR)"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Thomas Dunnington
+      url: https://github.com/dunningtonthomas
+    - name: Nolan Stevenson
+      url: https://github.com/nolans12
+    - name: Nyah Baltazar
+      url: null
+    - name: Andrew Kabos
+      url: null
+    - name: Marcus Quintanilla
+      url: null
+    - name: Yarden Kelmann
+      url: null
+    - name: Blair Schulze
+      url: null
+    - name: Nicholas Grant
+      url: null
+    - name: Zane Vandivere
+      url: null
+    - name: Lucia Witikko
+      url: null
+    - name: Brendan Bradley
+      url: null
+  context: "Senior Capstone Project"
+  year: 2024
+  image: imgs/projects/alligatr/cover_image.png
+  paper: data_new/FFR___ALLIGATR.pdf
+  code: https://github.com/nolans12/ALLIGATR
+  description: "An autonomous drone equipped with two cameras for tracking moving targets with computer vision. Targets were successfully localized within 2 meters RMS."
+
+- id: ltl
+  title: "Linear Temporal Logic Planning for Quadcopter Reconnaissance in Densely Populated Environments"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Nolan Stevenson
+      url: https://github.com/nolans12
+  context: "Motion Planning Final Project"
+  year: 2023
+  image: imgs/projects/ltl/cover_image.png
+  paper: data_new/Drone_LTL_Planner_Paper.pdf
+  code: https://github.com/cKohl10/Drone_LTL_Planner
+  description: "Satellite images of densely populated forests are used to plan waypoints for a quadcopter to fly through while avoiding obstacles. Waypoints allow RRT to visit targets in a set order and avoid obstacles."
+

@@ -1,0 +1,26 @@
+# Site settings
+title: Carson Kohlbrenner
+description: PhD Student at University of Colorado Boulder - Human Interaction & Robotics Group
+author: Carson Kohlbrenner
+email: carson.kohlbrenner@colorado.edu
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages
+baseurl: ""
+url: ""
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Collections (if you want to add blog posts later)
+# collections:
+#   posts:
+#     output: true
+

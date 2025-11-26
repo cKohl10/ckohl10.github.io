@@ -1,0 +1,73 @@
+# Papers/Publications
+# Add new papers at the top of this list (most recent first)
+# Required fields: id, title, authors, venue, year, image
+# Optional fields: project_page, code, arxiv, paper, description
+
+- id: gentact
+  title: "GenTact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D Printed Whole-Body Tactile Skins"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Caleb Escobedo
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: S. Sandra Bae
+      url: https://sandrabae.github.io/
+    - name: Alexander Dickhans
+      url: https://alex.dickhans.net/
+    - name: Alessandro Roncone
+      url: https://alessandro.ronc.one
+  venue: "IEEE International Conference on Robotics and Automation (ICRA)"
+  year: 2025
+  image: imgs/papers/gentact/cover_4.png
+  project_page: https://hiro-group.ronc.one/gentacttoolbox
+  code: https://github.com/cKohl10/GenTact
+  arxiv: https://arxiv.org/abs/2412.00711
+  description: "A system for creating whole-body tactile skins that can be procedurally generated to adapt to arbitrary environments. All sensors are 3D printable and simulatable in Isaac Sim."
+
+- id: localize
+  title: "A Machine Learning Approach to Contact Localization in Variable Density Three-Dimensional Tactile Artificial Skin"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Mitchell Murray
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Yutong Zhang
+      url: https://github.com/TonyZYT2000
+    - name: Caleb Escobedo
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Thomas Dunnington
+      url: https://github.com/dunningtonthomas
+    - name: Nolan Stevenson
+      url: https://github.com/nolans12
+    - name: Nikolaus Correll
+      url: https://www.colorado.edu/cs/nikolaus-correll
+    - name: Alessandro Roncone
+      url: https://alessandro.ronc.one
+  venue: "NeurIPS - Workshop on Touch Processing"
+  year: 2024
+  image: imgs/papers/localize/cover_image.png
+  code: https://github.com/HIRO-group/TactileContactLocalization
+  arxiv: https://arxiv.org/abs/2412.00689
+  description: "Near fingertip level accuracy for contact localization was achieved without locating internal sensors in a variable density tactile skin."
+
+- id: nonuniform
+  title: "A Sensor Position Localization Method for Flexible, Non-uniform Capacitive Tactile Sensor Arrays"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Caleb Escobedo
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Nataliya Nechyporenko
+      url: https://nataliya.dev/
+    - name: Alessandro Roncone
+      url: https://alessandro.ronc.one
+  venue: "arXiv Preprint"
+  year: 2024
+  image: imgs/papers/nonuniform/cover_image_300x192.png
+  code: https://github.com/cKohl10/RoboSkinProject
+  arxiv: https://arxiv.org/abs/2412.00672
+  description: "An explicit algorithm for localizing the position of capacitive sensors in a flexible, non-uniform sensor array."
+

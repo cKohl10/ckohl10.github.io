@@ -1,0 +1,41 @@
+<tr onmouseout="{{ include.project.id }}_stop()" onmouseover="{{ include.project.id }}_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='{{ include.project.id }}_image'>
+        <img src='{{ include.project.image }}' width=100%>
+      </div>
+      <img src='{{ include.project.image }}' width=100%>
+    </div>
+    <script type="text/javascript">
+      function {{ include.project.id }}_start() {
+        document.getElementById('{{ include.project.id }}_image').style.opacity = "1";
+      }
+
+      function {{ include.project.id }}_stop() {
+        document.getElementById('{{ include.project.id }}_image').style.opacity = "0";
+      }
+      {{ include.project.id }}_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="{% if include.project.code %}{{ include.project.code }}{% elsif include.project.paper %}{{ include.project.paper }}{% elsif include.project.article %}{{ include.project.article }}{% endif %}">
+      <span class="papertitle">{{ include.project.title }}</span>
+    </a>
+    <br>
+    {% for author in include.project.authors %}
+      {% if author.highlight %}<strong>{{ author.name }}</strong>{% elsif author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    <br>
+    <em>{{ include.project.context }}</em>, {{ include.project.year }}
+    <br>
+    <br>
+    {% if include.project.article %}<a href="{{ include.project.article }}">article</a>{% endif %}
+    {% if include.project.article and include.project.code %} / {% endif %}
+    {% if include.project.paper %}<a href="{{ include.project.paper }}">paper</a>{% endif %}
+    {% if include.project.paper and include.project.code %} / {% endif %}
+    {% if include.project.code %}<a href="{{ include.project.code }}">code</a>{% endif %}
+    <p></p>
+    <p>{{ include.project.description }}</p>
+  </td>
+</tr>
+

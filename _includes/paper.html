@@ -1,0 +1,42 @@
+<tr onmouseout="{{ include.paper.id }}_stop()" onmouseover="{{ include.paper.id }}_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='{{ include.paper.id }}_image'>
+        <img src='{{ include.paper.image }}' width=100%>
+      </div>
+      <img src='{{ include.paper.image }}' width=100%>
+    </div>
+    <script type="text/javascript">
+      function {{ include.paper.id }}_start() {
+        document.getElementById('{{ include.paper.id }}_image').style.opacity = "1";
+      }
+
+      function {{ include.paper.id }}_stop() {
+        document.getElementById('{{ include.paper.id }}_image').style.opacity = "0";
+      }
+      {{ include.paper.id }}_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="{% if include.paper.arxiv %}{{ include.paper.arxiv }}{% elsif include.paper.paper %}{{ include.paper.paper }}{% elsif include.paper.project_page %}{{ include.paper.project_page }}{% endif %}">
+      <span class="papertitle">{{ include.paper.title }}</span>
+    </a>
+    <br>
+    {% for author in include.paper.authors %}
+      {% if author.highlight %}<strong>{{ author.name }}</strong>{% elsif author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    <br>
+    <em>{{ include.paper.venue }}</em>, {{ include.paper.year }}
+    <br>
+    <br>
+    {% if include.paper.project_page %}<a href="{{ include.paper.project_page }}">project page</a>{% endif %}
+    {% if include.paper.project_page and include.paper.code %} / {% endif %}
+    {% if include.paper.code %}<a href="{{ include.paper.code }}">code</a>{% endif %}
+    {% if include.paper.code and include.paper.arxiv %} / {% endif %}
+    {% if include.paper.arxiv %}<a href="{{ include.paper.arxiv }}">arXiv</a>{% endif %}
+    {% if include.paper.paper %}<a href="{{ include.paper.paper }}">paper</a>{% endif %}
+    <p></p>
+    <p>{{ include.paper.description }}</p>
+  </td>
+</tr>
+

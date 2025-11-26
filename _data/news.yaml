@@ -1,0 +1,40 @@
+# News/Impacts
+# Add new items at the top of this list (most recent first)
+# Required fields: id, title, subtitle, year, image, alt, link
+# Optional fields: description
+
+- id: RMAIIG2025
+  title: "Live Demo"
+  subtitle: "RMAIIG 2025, Boulder, Colorado"
+  year: 2025
+  image: imgs/news/RMAIIG2025/cover.jpg
+  alt: "Live Demo of Collision Avoidance with Proximity Sensing at RMAIIG 2025"
+  link: https://hiro-group.ronc.one/
+  description: "I presented my research on collision avoidance with proximity sensing at the RMAIIG 2025"
+
+- id: tenuretalk
+  title: "Live Demo"
+  subtitle: "Dr. Roncone's Tenure Talk, University of Colorado Boulder"
+  year: 2025
+  image: imgs/news/presentations/alessandro_tenure_talk_edit.png
+  alt: "Live Demo at Dr. Roncone's Tenure Talk"
+  link: https://hiro-group.ronc.one/
+  description: "I operated a live collision avoidance demo with proximity sensing at Dr. Roncone's tenure talk!"
+
+- id: figurePost
+  title: "Community Recognition (X)"
+  subtitle: "Brett Adcock, Founder and CEO of Figure AI"
+  year: 2025
+  image: imgs/news/posts/brett_x.png
+  alt: "Community Recognition: Brett Adcock, X"
+  link: https://x.com/adcock_brett/status/1941891039330988359
+  description: "Brett Adcock shared my research on collision avoidance with proximity sensing on his X!"
+
+- id: ICRA2025
+  title: "Paper Presentation"
+  subtitle: "International Conference on Robotics and Automation (ICRA) 2025, Atlanta, Georgia"
+  year: 2025
+  image: imgs/news/ICRA2025/presentation_edit.png
+  alt: "Paper Presentation at International Conference on Robotics and Automation (ICRA) 2025"
+  link: https://hiro-group.ronc.one/
+  description: "I presented my research on tactile sensors generation at the ICRA!"

@@ -1,0 +1,15 @@
+<div class="impact-item">
+  <div class="impact-date">{{ include.impact.year }}</div>
+  <a class="impact-link" href="{{ include.impact.link }}" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="{{ include.impact.image }}" alt="{{ include.impact.alt }}" class="impact-image">
+        <div class="impact-overlay">
+          <p>{{ include.impact.description }}</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">{{ include.impact.title }}<span>{{ include.impact.subtitle }}</span></figcaption>
+    </figure>
+  </a>
+</div>
+
