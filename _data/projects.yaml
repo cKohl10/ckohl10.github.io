@@ -3,6 +3,37 @@
 # Required fields: id, title, authors, context, year, image
 # Optional fields: project_page, code, paper, article, description
 
+- id: bullet-time
+  title: "Whole-Body Dynamic Obstacle Avoidance with Humanoid Skin"
+  authors:
+    - name: Niraj Pudasaini
+      url: null
+      highlight: true
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: William Xie
+      url: null
+      highlight: true
+  context: "Deep Reinforcement Learning Final Project"
+  year: 2025
+  image: imgs/projects/bullet_time/bullet_time_cover.png
+  paper: data_new/Bullet_Time.pdf
+  description: "A recreation of the Bullet Time scene using a humanoid proximity sensing skin and a deep reinforcement learning agent."
+
+- id: euroc
+  title: "Converting the EuRoC MAV Dataset to MCAP and visualizing SLAM using Foxglove"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+  context: "Foxglove Tutorial"
+  year: 2025
+  image: imgs/projects/euroc/euroc_vid.mp4
+  article: https://foxglove.dev/blog/converting-euroc-mav-dataset-to-mcap
+  code: https://github.com/foxglove/tutorials
+  description: "A step-by-step guide to visualizing SLAM data using Foxglove."
+
 - id: clip
   title: "Training CLIP to Recognize Objects with Tactile Sensors"
   authors:

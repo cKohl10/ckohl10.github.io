@@ -1,21 +1,32 @@
-<tr onmouseout="{{ include.project.id }}_stop()" onmouseover="{{ include.project.id }}_start()">
+{% assign media = include.project.image %}
+{% assign is_video = false %}
+{% if media contains '.mp4' or media contains '.webm' %}
+  {% assign is_video = true %}
+{% endif %}
+<tr{% unless is_video %} onmouseout="{{ include.project.id }}_stop()" onmouseover="{{ include.project.id }}_start()"{% endunless %}>
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
-      <div class="two" id='{{ include.project.id }}_image'>
+      {% if is_video %}
+        <video class="project-media" src="{{ media }}" autoplay loop muted playsinline preload="metadata"></video>
+      {% else %}
+        <div class="two" id='{{ include.project.id }}_image'>
+          <img src='{{ include.project.image }}' width=100%>
+        </div>
         <img src='{{ include.project.image }}' width=100%>
-      </div>
-      <img src='{{ include.project.image }}' width=100%>
+      {% endif %}
     </div>
-    <script type="text/javascript">
-      function {{ include.project.id }}_start() {
-        document.getElementById('{{ include.project.id }}_image').style.opacity = "1";
-      }
+    {% unless is_video %}
+      <script type="text/javascript">
+        function {{ include.project.id }}_start() {
+          document.getElementById('{{ include.project.id }}_image').style.opacity = "1";
+        }
 
-      function {{ include.project.id }}_stop() {
-        document.getElementById('{{ include.project.id }}_image').style.opacity = "0";
-      }
-      {{ include.project.id }}_stop()
-    </script>
+        function {{ include.project.id }}_stop() {
+          document.getElementById('{{ include.project.id }}_image').style.opacity = "0";
+        }
+        {{ include.project.id }}_stop()
+      </script>
+    {% endunless %}
   </td>
   <td style="padding:20px;width:75%;vertical-align:middle">
     <a href="{% if include.project.code %}{{ include.project.code }}{% elsif include.project.paper %}{{ include.project.paper }}{% elsif include.project.article %}{{ include.project.article }}{% endif %}">
