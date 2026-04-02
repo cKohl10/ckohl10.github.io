@@ -3,6 +3,14 @@
 # Required fields: id, title, subtitle, year, image, alt, link
 # Optional fields: description
 
+- id: student_paper_award
+  title: "Outstanding Paper Award"
+  subtitle: "CU Boulder Graduate Awards, Boulder, Colorado"
+  year: 2026
+  image: imgs/news/awards/award.png
+  alt: "Outstanding Paper Award by the University of Colorado Boulder for my latest ICRA paper"
+  description: "I was awarded the Outstanding Paper Award for my lastet ICRA paper!"
+
 - id: RMAIIG2025
   title: "Live Demo"
   subtitle: "RMAIIG 2025, Boulder, Colorado"

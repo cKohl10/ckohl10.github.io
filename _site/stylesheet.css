@@ -80,45 +80,69 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
 .papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 15px;
   font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.paper-authors {
+  font-size: 12.5px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.paper-authors a {
+  color: #aaa;
+}
+
+.paper-authors strong {
+  color: #3a3a3a;
+  font-weight: normal;
+}
+
+.paper-entry {
+  border: 1px solid #e0ddd8;
+  background: #fcfbf9;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 192px;
+  height: 192px;
   position: relative;
   overflow: hidden;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 192px;
+  height: 192px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;

@@ -1,4 +1,4 @@
-<tr onmouseout="{{ include.paper.id }}_stop()" onmouseover="{{ include.paper.id }}_start()">
+<tr class="paper-entry" onmouseout="{{ include.paper.id }}_stop()" onmouseover="{{ include.paper.id }}_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='{{ include.paper.id }}_image'>
@@ -22,21 +22,20 @@
       <span class="papertitle">{{ include.paper.title }}</span>
     </a>
     <br>
+    <em>{{ include.paper.venue }}</em>, {{ include.paper.year }}
+    <br><br>
+    <span class="paper-authors">
     {% for author in include.paper.authors %}
       {% if author.highlight %}<strong>{{ author.name }}</strong>{% elsif author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %},{% endunless %}
     {% endfor %}
-    <br>
-    <em>{{ include.paper.venue }}</em>, {{ include.paper.year }}
-    <br>
-    <br>
-    {% if include.paper.project_page %}<a href="{{ include.paper.project_page }}">project page</a>{% endif %}
+    </span>
+    <br><br>
+    <div>{% if include.paper.project_page %}<a href="{{ include.paper.project_page }}">project page</a>{% endif %}
     {% if include.paper.project_page and include.paper.code %} / {% endif %}
     {% if include.paper.code %}<a href="{{ include.paper.code }}">code</a>{% endif %}
     {% if include.paper.code and include.paper.arxiv %} / {% endif %}
     {% if include.paper.arxiv %}<a href="{{ include.paper.arxiv }}">arXiv</a>{% endif %}
-    {% if include.paper.paper %}<a href="{{ include.paper.paper }}">paper</a>{% endif %}
-    <p></p>
-    <p>{{ include.paper.description }}</p>
+    {% if include.paper.paper %}<a href="{{ include.paper.paper }}">paper</a>{% endif %}</div>
   </td>
 </tr>
 

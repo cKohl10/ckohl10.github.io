@@ -19,14 +19,14 @@
             <p class="name" style="text-align: center;">
               Carson Kohlbrenner
             </p>
-            <p>I am a PhD student with the <a href="https://hiro-group.ronc.one/people.html">Human Interaction & Robotics Group</a> at the University of Colorado Boulder advised by <a href="https://alessandro.ronc.one">Alessandro Roncone</a>. My research interests lie in whole-body perception and learning for collaborative generalized robotics. Specifically, my research is focused on establishing a body schema in robots through tactile sensing and artificial peri-personal space</a>.
+            <p>I am a PhD student with the <a href="https://hiro-group.ronc.one/people.html">Human Interaction & Robotics Group</a> at the University of Colorado Boulder advised by <a href="https://alessandro.ronc.one">Alessandro Roncone</a>. My research interests lie in whole-body perception and learning for collaborative robotics. Specifically, my research is focused on establishing a body schema in robots through tactile sensing and artificial peri-personal space</a>.
             </p>
             <p>
-              I completed my undergraduate and master's degrees in Aerospace Engineering with a minor in Computer Science at the University of Colorado Boulder</a>. It was there where I first discovered my passion for robotics by developing autonomous drone and rocket motion planners.
+              I am currently the primary maintainer of the <a href="https://hiro-group.ronc.one/gentacttoolbox">GenTact Toolbox</a>, a computational design pipeline for generating whole-body tactile skins that are fully 3D printable.
             </p>
             <p>
             <p>
-              When I'm not immersed in the world of robotics and research, you can find me enjoying a round of golf, producing music, or enjoying the outdoors. I am always interested in new opportunities and collaborations!                
+              When I'm not immersed in research, you can find me enjoying a round of golf, producing music, or enjoying the outdoors. I am always interested in new opportunities and collaborations!                
             </p>
             </p>
             <p style="text-align:center">
@@ -59,6 +59,23 @@
               <div class="impacts-viewport">
                 <div class="impacts-timeline"></div>
                 <div class="impacts-track">
+                  
+                    <div class="impact-item">
+  <div class="impact-date">2026</div>
+  <a class="impact-link" href="" target="_blank" rel="noopener noreferrer">
+    <figure class="impact-card">
+      <div class="impact-image-wrapper" tabindex="0">
+        <img src="imgs/news/awards/award.png" alt="Outstanding Paper Award by the University of Colorado Boulder for my latest ICRA paper" class="impact-image">
+        <div class="impact-overlay">
+          <p>I was awarded the Outstanding Paper Award for my lastet ICRA paper!</p>
+        </div>
+      </div>
+      <figcaption class="impact-title">Outstanding Paper Award<span>CU Boulder Graduate Awards, Boulder, Colorado</span></figcaption>
+    </figure>
+  </a>
+</div>
+
+
                   
                     <div class="impact-item">
   <div class="impact-date">2025</div>
@@ -250,7 +267,58 @@
       </tbody></table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
-          <tr onmouseout="gentact_stop()" onmouseover="gentact_start()">
+          <tr class="paper-entry" onmouseout="gentactprox_stop()" onmouseover="gentactprox_start()">
+  <td style="padding:20px;width:25%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='gentactprox_image'>
+        <img src='imgs/papers/gentactprox/cover_final2.png' width=100%>
+      </div>
+      <img src='imgs/papers/gentactprox/cover_final2.png' width=100%>
+    </div>
+    <script type="text/javascript">
+      function gentactprox_start() {
+        document.getElementById('gentactprox_image').style.opacity = "1";
+      }
+
+      function gentactprox_stop() {
+        document.getElementById('gentactprox_image').style.opacity = "0";
+      }
+      gentactprox_stop()
+    </script>
+  </td>
+  <td style="padding:20px;width:75%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2603.04714">
+      <span class="papertitle">Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors</span>
+    </a>
+    <br>
+    <em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2026
+    <br><br>
+    <span class="paper-authors">
+    
+      <strong>Carson Kohlbrenner</strong>,
+    
+      <a href="https://www.linkedin.com/in/anna-soukhovei/">Anna Soukhovei</a>,
+    
+      <a href="https://hiro-group.ronc.one/caleb.html">Caleb Escobedo</a>,
+    
+      <a href="https://nataliya.dev/">Nataliya Nechyporenko</a>,
+    
+      <a href="https://alessandro.ronc.one">Alessandro Roncone</a>
+    
+    </span>
+    <br><br>
+    <div><a href="https://hiro-group.ronc.one/gentacttoolbox/websites/icra2026/icra2026.html">project page</a>
+     / 
+    <a href="https://github.com/cKohl10/GenTact">code</a>
+     / 
+    <a href="https://arxiv.org/abs/2603.04714">arXiv</a>
+    </div>
+  </td>
+</tr>
+
+
+        
+          <tr class="paper-entry" onmouseout="gentact_stop()" onmouseover="gentact_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='gentact_image'>
@@ -274,6 +342,9 @@
       <span class="papertitle">GenTact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D Printed Whole-Body Tactile Skins</span>
     </a>
     <br>
+    <em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2025
+    <br><br>
+    <span class="paper-authors">
     
       <strong>Carson Kohlbrenner</strong>,
     
@@ -285,24 +356,20 @@
     
       <a href="https://alessandro.ronc.one">Alessandro Roncone</a>
     
-    <br>
-    <em>IEEE International Conference on Robotics and Automation (ICRA)</em>, 2025
-    <br>
-    <br>
-    <a href="https://hiro-group.ronc.one/gentacttoolbox">project page</a>
+    </span>
+    <br><br>
+    <div><a href="https://hiro-group.ronc.one/gentacttoolbox">project page</a>
      / 
     <a href="https://github.com/cKohl10/GenTact">code</a>
      / 
     <a href="https://arxiv.org/abs/2412.00711">arXiv</a>
-    
-    <p></p>
-    <p>A system for creating whole-body tactile skins that can be procedurally generated to adapt to arbitrary environments. All sensors are 3D printable and simulatable in Isaac Sim.</p>
+    </div>
   </td>
 </tr>
 
 
         
-          <tr onmouseout="localize_stop()" onmouseover="localize_start()">
+          <tr class="paper-entry" onmouseout="localize_stop()" onmouseover="localize_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='localize_image'>
@@ -326,6 +393,9 @@
       <span class="papertitle">A Machine Learning Approach to Contact Localization in Variable Density Three-Dimensional Tactile Artificial Skin</span>
     </a>
     <br>
+    <em>NeurIPS - Workshop on Touch Processing</em>, 2024
+    <br><br>
+    <span class="paper-authors">
     
       <strong>Carson Kohlbrenner</strong>,
     
@@ -343,24 +413,20 @@
     
       <a href="https://alessandro.ronc.one">Alessandro Roncone</a>
     
-    <br>
-    <em>NeurIPS - Workshop on Touch Processing</em>, 2024
-    <br>
-    <br>
-    
+    </span>
+    <br><br>
+    <div>
     
     <a href="https://github.com/HIRO-group/TactileContactLocalization">code</a>
      / 
     <a href="https://arxiv.org/abs/2412.00689">arXiv</a>
-    
-    <p></p>
-    <p>Near fingertip level accuracy for contact localization was achieved without locating internal sensors in a variable density tactile skin.</p>
+    </div>
   </td>
 </tr>
 
 
         
-          <tr onmouseout="nonuniform_stop()" onmouseover="nonuniform_start()">
+          <tr class="paper-entry" onmouseout="nonuniform_stop()" onmouseover="nonuniform_start()">
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='nonuniform_image'>
@@ -384,6 +450,9 @@
       <span class="papertitle">A Sensor Position Localization Method for Flexible, Non-uniform Capacitive Tactile Sensor Arrays</span>
     </a>
     <br>
+    <em>arXiv Preprint</em>, 2024
+    <br><br>
+    <span class="paper-authors">
     
       <strong>Carson Kohlbrenner</strong>,
     
@@ -393,18 +462,14 @@
     
       <a href="https://alessandro.ronc.one">Alessandro Roncone</a>
     
-    <br>
-    <em>arXiv Preprint</em>, 2024
-    <br>
-    <br>
-    
+    </span>
+    <br><br>
+    <div>
     
     <a href="https://github.com/cKohl10/RoboSkinProject">code</a>
      / 
     <a href="https://arxiv.org/abs/2412.00672">arXiv</a>
-    
-    <p></p>
-    <p>An explicit algorithm for localizing the position of capacitive sensors in a flexible, non-uniform sensor array.</p>
+    </div>
   </td>
 </tr>
 
@@ -416,7 +481,7 @@
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Projects</h2>
+            <h2>Technical Reports</h2>
           </td>
         </tr>
       </tbody></table>

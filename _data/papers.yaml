@@ -2,6 +2,28 @@
 # Add new papers at the top of this list (most recent first)
 # Required fields: id, title, authors, venue, year, image
 # Optional fields: project_page, code, arxiv, paper, description
+- id: gentactprox
+  title: "Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Anna Soukhovei
+      url: https://www.linkedin.com/in/anna-soukhovei/
+    - name: Caleb Escobedo
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Nataliya Nechyporenko
+      url: https://nataliya.dev/
+    - name: Alessandro Roncone
+      url: https://alessandro.ronc.one
+  venue: "IEEE International Conference on Robotics and Automation (ICRA)"
+  year: 2026
+  image: imgs/papers/gentactprox/cover_final2.png
+  project_page: https://hiro-group.ronc.one/gentacttoolbox/websites/icra2026/icra2026.html
+  code: https://github.com/cKohl10/GenTact
+  arxiv: https://arxiv.org/abs/2603.04714
+  description: "Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation."
+
 
 - id: gentact
   title: "GenTact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D Printed Whole-Body Tactile Skins"
