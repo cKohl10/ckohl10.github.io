@@ -169,6 +169,12 @@ title: Carson Kohlbrenner
       </tbody></table>
 
       <!-- Publications Section -->
+      {% assign journal_papers = site.data.papers | where: "type", "journal" %}
+      {% assign conference_papers = site.data.papers | where: "type", "conference" %}
+      {% assign workshop_papers = site.data.papers | where: "type", "workshop" %}
+      {% assign preprint_papers = site.data.papers | where: "type", "preprint" %}
+      {% assign report_papers = site.data.papers | where: "type", "report" %}
+
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
@@ -176,25 +182,51 @@ title: Carson Kohlbrenner
           </td>
         </tr>
       </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% for paper in site.data.papers %}
-          {% include paper.html paper=paper %}
-        {% endfor %}
-      </tbody></table>
 
-      <!-- Projects Section -->
+      {% if journal_papers.size > 0 %}
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Technical Reports</h2>
-          </td>
-        </tr>
+        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Journal Papers</h3></td></tr>
       </tbody></table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% for project in site.data.projects %}
-          {% include project.html project=project %}
-        {% endfor %}
+        {% include paper_section.html papers=journal_papers %}
       </tbody></table>
+      {% endif %}
+
+      {% if conference_papers.size > 0 %}
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Conference Papers</h3></td></tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        {% include paper_section.html papers=conference_papers %}
+      </tbody></table>
+      {% endif %}
+
+      {% if workshop_papers.size > 0 %}
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Workshop Papers</h3></td></tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        {% include paper_section.html papers=workshop_papers %}
+      </tbody></table>
+      {% endif %}
+
+      {% if preprint_papers.size > 0 %}
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Preprints</h3></td></tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        {% include paper_section.html papers=preprint_papers %}
+      </tbody></table>
+      {% endif %}
+
+      {% if report_papers.size > 0 %}
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Technical Reports</h3></td></tr>
+      </tbody></table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        {% include paper_section.html papers=report_papers %}
+      </tbody></table>
+      {% endif %}
 
       <!-- Footer -->
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>

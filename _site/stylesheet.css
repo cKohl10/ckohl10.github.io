@@ -336,6 +336,62 @@ img {
   height: auto;
 }
 
+/* --- Paper type background colors (adjust these variables) --- */
+:root {
+  --paper-bg-journal:    #e8f4ec;
+  --paper-bg-conference: #e8eef8;
+  --paper-bg-workshop:   #f8f4e8;
+  --paper-bg-preprint:   #f4e8f4;
+  --paper-bg-report:     #e8f0f0;
+}
+
+tr.paper-type-journal    { background-color: var(--paper-bg-journal); }
+tr.paper-type-conference { background-color: var(--paper-bg-conference); }
+tr.paper-type-workshop   { background-color: var(--paper-bg-workshop); }
+tr.paper-type-preprint   { background-color: var(--paper-bg-preprint); }
+tr.paper-type-report     { background-color: var(--paper-bg-report); }
+
+/* --- Year timeline column --- */
+.year-cell {
+  width: 6%;
+  vertical-align: top;
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.year-label {
+  font-weight: bold;
+  font-size: 0.85em;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.year-cell::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: #ccc;
+  top: 0;
+  bottom: 0;
+}
+
+.year-cell.year-first::after {
+  top: 38px;
+}
+
+.year-cell.year-last::after {
+  bottom: 50%;
+}
+
+.year-cell.year-first.year-last::after {
+  display: none;
+}
+
 table {
   table-layout: fixed;
   width: 100%;
@@ -346,6 +402,10 @@ td {
 }
 
 @media (max-width: 768px) {
+  .year-cell {
+    display: none !important;
+  }
+
   table,
   tbody,
   tr,

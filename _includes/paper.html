@@ -1,24 +1,37 @@
-<tr class="paper-entry" onmouseout="{{ include.paper.id }}_stop()" onmouseover="{{ include.paper.id }}_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='{{ include.paper.id }}_image'>
-        <img src='{{ include.paper.image }}' width=100%>
-      </div>
-      <img src='{{ include.paper.image }}' width=100%>
-    </div>
-    <script type="text/javascript">
-      function {{ include.paper.id }}_start() {
-        document.getElementById('{{ include.paper.id }}_image').style.opacity = "1";
-      }
-
-      function {{ include.paper.id }}_stop() {
-        document.getElementById('{{ include.paper.id }}_image').style.opacity = "0";
-      }
-      {{ include.paper.id }}_stop()
-    </script>
+{% assign media = include.paper.image %}
+{% assign is_video = false %}
+{% if media contains '.mp4' or media contains '.webm' %}
+  {% assign is_video = true %}
+{% endif %}
+<tr class="paper-entry paper-type-{{ include.paper.type }}"{% unless is_video %} onmouseout="{{ include.paper.id }}_stop()" onmouseover="{{ include.paper.id }}_start()"{% endunless %}>
+  <td class="year-cell{% if include.show_year %} year-first{% endif %}{% if include.last_of_year %} year-last{% endif %}">
+    {% if include.show_year %}<span class="year-label">{{ include.paper.year }}</span>{% endif %}
   </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <a href="{% if include.paper.arxiv %}{{ include.paper.arxiv }}{% elsif include.paper.paper %}{{ include.paper.paper }}{% elsif include.paper.project_page %}{{ include.paper.project_page }}{% endif %}">
+  <td style="padding:20px;width:24%;vertical-align:middle">
+    <div class="one">
+      {% if is_video %}
+        <video class="project-media" src="{{ media }}" autoplay loop muted playsinline preload="metadata" width="100%" height="100%"></video>
+      {% else %}
+        <div class="two" id='{{ include.paper.id }}_image'>
+          <img src='{{ include.paper.image }}' width=100%>
+        </div>
+        <img src='{{ include.paper.image }}' width=100%>
+      {% endif %}
+    </div>
+    {% unless is_video %}
+      <script type="text/javascript">
+        function {{ include.paper.id }}_start() {
+          document.getElementById('{{ include.paper.id }}_image').style.opacity = "1";
+        }
+        function {{ include.paper.id }}_stop() {
+          document.getElementById('{{ include.paper.id }}_image').style.opacity = "0";
+        }
+        {{ include.paper.id }}_stop()
+      </script>
+    {% endunless %}
+  </td>
+  <td style="padding:20px;width:70%;vertical-align:middle">
+    <a href="{% if include.paper.arxiv %}{{ include.paper.arxiv }}{% elsif include.paper.paper %}{{ include.paper.paper }}{% elsif include.paper.article %}{{ include.paper.article }}{% elsif include.paper.project_page %}{{ include.paper.project_page }}{% elsif include.paper.code %}{{ include.paper.code }}{% endif %}">
       <span class="papertitle">{{ include.paper.title }}</span>
     </a>
     <br>
@@ -35,7 +48,7 @@
     {% if include.paper.code %}<a href="{{ include.paper.code }}">code</a>{% endif %}
     {% if include.paper.code and include.paper.arxiv %} / {% endif %}
     {% if include.paper.arxiv %}<a href="{{ include.paper.arxiv }}">arXiv</a>{% endif %}
-    {% if include.paper.paper %}<a href="{{ include.paper.paper }}">paper</a>{% endif %}</div>
+    {% if include.paper.paper %}<a href="{{ include.paper.paper }}">paper</a>{% endif %}
+    {% if include.paper.article %}<a href="{{ include.paper.article }}">article</a>{% endif %}</div>
   </td>
 </tr>
-

@@ -1,0 +1,17 @@
+{% for paper in include.papers %}
+  {% assign show_year = false %}
+  {% assign last_of_year = false %}
+  {% if forloop.first or paper.year != prev_sec_year %}
+    {% assign show_year = true %}
+  {% endif %}
+  {% if forloop.last %}
+    {% assign last_of_year = true %}
+  {% else %}
+    {% assign next_paper = include.papers[forloop.index] %}
+    {% if next_paper.year != paper.year %}
+      {% assign last_of_year = true %}
+    {% endif %}
+  {% endif %}
+  {% include paper.html paper=paper show_year=show_year last_of_year=last_of_year %}
+  {% assign prev_sec_year = paper.year %}
+{% endfor %}

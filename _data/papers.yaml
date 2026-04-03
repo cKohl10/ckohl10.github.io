@@ -1,7 +1,8 @@
-# Papers/Publications
-# Add new papers at the top of this list (most recent first)
-# Required fields: id, title, authors, venue, year, image
-# Optional fields: project_page, code, arxiv, paper, description
+# Papers & Reports (most recent first within each type)
+# Required fields: id, title, authors, venue, type, year, image
+# Optional fields: project_page, code, arxiv, paper, article, description
+# Types: journal, conference, workshop, preprint, report
+
 - id: gentactprox
   title: "Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors"
   authors:
@@ -17,6 +18,7 @@
     - name: Alessandro Roncone
       url: https://alessandro.ronc.one
   venue: "IEEE International Conference on Robotics and Automation (ICRA)"
+  type: conference
   year: 2026
   image: imgs/papers/gentactprox/cover_final2.png
   project_page: https://hiro-group.ronc.one/gentacttoolbox/websites/icra2026/icra2026.html
@@ -24,6 +26,29 @@
   arxiv: https://arxiv.org/abs/2603.04714
   description: "Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation."
 
+- id: formfitting
+  title: "Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection"
+  authors:
+    - name: Anna Soukhovei
+      url: https://www.linkedin.com/in/anna-soukhovei/
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Caleb Escobedo
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Alexander Gholmieh
+      url: null
+    - name: Alexander Dickhans
+      url: https://alex.dickhans.net/
+    - name: Alessandro Roncone
+      url: https://alessandro.ronc.one
+  venue: "Humanoids Workshop on Advances in Contact-Rich Robotics: Rich Tactile-Based Physical Interaction [ConRich]"
+  type: workshop
+  year: 2025
+  image: imgs/papers/formfitting_cover.png
+  project_page: https://hiro-group.ronc.one/gentacttoolbox
+  arxiv: https://arxiv.org/abs/2603.23725
+  description: "Extends GenTact with a form-fitting, large-area sensor mounting solution for time-of-flight sensors."
 
 - id: gentact
   title: "GenTact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D Printed Whole-Body Tactile Skins"
@@ -40,6 +65,7 @@
     - name: Alessandro Roncone
       url: https://alessandro.ronc.one
   venue: "IEEE International Conference on Robotics and Automation (ICRA)"
+  type: conference
   year: 2025
   image: imgs/papers/gentact/cover_4.png
   project_page: https://hiro-group.ronc.one/gentacttoolbox
@@ -68,6 +94,7 @@
     - name: Alessandro Roncone
       url: https://alessandro.ronc.one
   venue: "NeurIPS - Workshop on Touch Processing"
+  type: workshop
   year: 2024
   image: imgs/papers/localize/cover_image.png
   code: https://github.com/HIRO-group/TactileContactLocalization
@@ -87,9 +114,129 @@
     - name: Alessandro Roncone
       url: https://alessandro.ronc.one
   venue: "arXiv Preprint"
+  type: preprint
   year: 2024
   image: imgs/papers/nonuniform/cover_image_300x192.png
   code: https://github.com/cKohl10/RoboSkinProject
   arxiv: https://arxiv.org/abs/2412.00672
   description: "An explicit algorithm for localizing the position of capacitive sensors in a flexible, non-uniform sensor array."
+
+- id: bullet-time
+  title: "Whole-Body Dynamic Obstacle Avoidance with Humanoid Skin"
+  authors:
+    - name: Niraj Pudasaini
+      url: null
+      highlight: true
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: William Xie
+      url: null
+      highlight: true
+  venue: "Deep Reinforcement Learning Final Project"
+  type: report
+  year: 2025
+  image: imgs/projects/bullet_time/bullet_time_cover.png
+  paper: data_new/Bullet_Time.pdf
+  description: "A recreation of the Bullet Time scene using a humanoid proximity sensing skin and a deep reinforcement learning agent."
+
+- id: euroc
+  title: "Converting the EuRoC MAV Dataset to MCAP and visualizing SLAM using Foxglove"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+  venue: "Foxglove Tutorial"
+  type: report
+  year: 2025
+  image: imgs/projects/euroc/euroc_vid.mp4
+  article: https://foxglove.dev/blog/converting-euroc-mav-dataset-to-mcap
+  code: https://github.com/foxglove/tutorials
+  description: "A step-by-step guide to visualizing SLAM data using Foxglove."
+
+- id: clip
+  title: "Training CLIP to Recognize Objects with Tactile Sensors"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Nikolaus Correll
+      url: https://www.colorado.edu/cs/nikolaus-correll
+  venue: "Transformer Based Robotic AI"
+  type: report
+  year: 2024
+  image: imgs/projects/clip/cover_image.png
+  article: https://medium.com/correll-lab/training-clip-to-recognize-objects-with-tactile-sensors-8e4f480027a3
+  code: https://colab.research.google.com/drive/1iYD2WDOGnPQSRmr0qXOLSl3eMh7S1IXt?usp=sharing
+  description: "A step-by-step guide to training vision transformers to recognize objects with tactile sensors using contrastive learning."
+
+- id: rocket
+  title: "Self-Landing Rocket using Deep Reinforcement Learning"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Owen Craig
+      url: https://hiro-group.ronc.one/caleb.html
+    - name: Thomas Dunnington
+      url: https://github.com/dunningtonthomas
+  venue: "Decision Making Under Uncertainty Final Project"
+  type: report
+  year: 2024
+  image: imgs/projects/rocket/cover_image.png
+  paper: data_new/Self_Landing_Rocket_Paper.pdf
+  code: https://github.com/cKohl10/Self_Landing_Rocket
+  description: "Deep Q-network, behavior cloning, and heuristic PID control methods for safely landing a rocket on a platform are implemented and compared."
+
+- id: alligatr
+  title: "Autonomous Localization for GPS-denied Aerial Tracking and Reconnaissance (ALLIGATR)"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Thomas Dunnington
+      url: https://github.com/dunningtonthomas
+    - name: Nolan Stevenson
+      url: https://github.com/nolans12
+    - name: Nyah Baltazar
+      url: null
+    - name: Andrew Kabos
+      url: null
+    - name: Marcus Quintanilla
+      url: null
+    - name: Yarden Kelmann
+      url: null
+    - name: Blair Schulze
+      url: null
+    - name: Nicholas Grant
+      url: null
+    - name: Zane Vandivere
+      url: null
+    - name: Lucia Witikko
+      url: null
+    - name: Brendan Bradley
+      url: null
+  venue: "Senior Capstone Project"
+  type: report
+  year: 2024
+  image: imgs/projects/alligatr/cover_image.png
+  paper: data_new/FFR___ALLIGATR.pdf
+  code: https://github.com/nolans12/ALLIGATR
+  description: "An autonomous drone equipped with two cameras for tracking moving targets with computer vision. Targets were successfully localized within 2 meters RMS."
+
+- id: ltl
+  title: "Linear Temporal Logic Planning for Quadcopter Reconnaissance in Densely Populated Environments"
+  authors:
+    - name: Carson Kohlbrenner
+      url: null
+      highlight: true
+    - name: Nolan Stevenson
+      url: https://github.com/nolans12
+  venue: "Motion Planning Final Project"
+  type: report
+  year: 2023
+  image: imgs/projects/ltl/cover_image.png
+  paper: data_new/Drone_LTL_Planner_Paper.pdf
+  code: https://github.com/cKohl10/Drone_LTL_Planner
+  description: "Satellite images of densely populated forests are used to plan waypoints for a quadcopter to fly through while avoiding obstacles. Waypoints allow RRT to visit targets in a set order and avoid obstacles."
 
