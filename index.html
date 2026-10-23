@@ -1,244 +1,77 @@
----
-layout: default
-title: Carson Kohlbrenner
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carson Kohlbrenner</title>
+  <link rel="icon" href="images/favicon/favicon.ico">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="page">
+  <h1>Carson Kohlbrenner</h1>
+  <hr>
 
-<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr style="padding:0px">
-    <td style="padding:0px">
-      <!-- Header Section -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr style="padding:0px">
-          <td style="padding:2.5%;width:63%;vertical-align:middle">
-            <p class="name" style="text-align: center;">
-              Carson Kohlbrenner
-            </p>
-            <p>I am a PhD student with the <a href="https://hiro-group.ronc.one/people.html">Human Interaction & Robotics Group</a> at the University of Colorado Boulder advised by <a href="https://alessandro.ronc.one">Alessandro Roncone</a>. My research interests lie in whole-body perception and learning for collaborative robotics. Specifically, my research is focused on establishing a body schema in robots through tactile sensing and artificial peri-personal space</a>.
-            </p>
-            <p>
-              I am currently the primary maintainer of the <a href="https://hiro-group.ronc.one/gentacttoolbox">GenTact Toolbox</a>, a computational design pipeline for generating whole-body tactile skins that are fully 3D printable.
-            </p>
-            <p>
-            <p>
-              When I'm not immersed in research, you can find me enjoying a round of golf, producing music, or enjoying the outdoors. I am always interested in new opportunities and collaborations!                
-            </p>
-            </p>
-            <p style="text-align:center">
-              <a href="mailto:carson.kohlbrenner@colorado.edu">Email</a> &nbsp;/&nbsp;
-              <a href="data_new/Carson_CV.pdf">CV</a> &nbsp;/&nbsp;
-              <a href="https://scholar.google.com/citations?hl=en&user=kroi6Q4AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-              <a href="https://github.com/ckohl10/">Github</a> &nbsp;/&nbsp;
-              <a href="https://medium.com/@carson.kohlbrenner">Medium</a> &nbsp;/&nbsp;
-              <a href="https://www.linkedin.com/in/carson-kohlbrenner-98658b206/">LinkedIn</a>
-            </p>
-          </td>
-          <td style="padding:2.5%;width:40%;max-width:40%">
-            <a href="imgs/profile/carson.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="imgs/profile/carson.jpg" class="hoverZoomLink"></a>
-          </td>
-        </tr>
-      </tbody></table>
+  <p>
+    <a href="mailto:carson.kohlbrenner@colorado.edu">Email</a> |
+    <a href="data_new/Carson_CV.pdf">CV</a> |
+    <a href="https://scholar.google.com/citations?hl=en&user=kroi6Q4AAAAJ">Google Scholar</a> |
+    <a href="https://github.com/ckohl10/">GitHub</a> |
+    <a href="https://medium.com/@carson.kohlbrenner">Medium</a> |
+    <a href="https://www.linkedin.com/in/carson-kohlbrenner-98658b206/">LinkedIn</a>
+  </p>
+  <hr>
 
-      <!-- Impacts/News Section -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px 20px 0 20px;width:100%;vertical-align:middle">
-            <h2>Impacts</h2>
-          </td>
-        </tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:0 20px 20px 20px;width:100%;vertical-align:middle">
-            <div class="impacts-reel" aria-live="polite">
-              <div class="impacts-viewport">
-                <div class="impacts-timeline"></div>
-                <div class="impacts-track">
-                  {% for impact in site.data.news %}
-                    {% include impact.html impact=impact %}
-                  {% endfor %}
-                </div>
-                <div class="impacts-nav" aria-hidden="false">
-                  <button class="impacts-button impacts-button--prev" aria-label="Previous">
-                    &#9664;
-                  </button>
-                  <button class="impacts-button impacts-button--next" aria-label="Next">
-                    &#9654;
-                  </button>
-                </div>
-              </div>
-            </div>
-            <script type="text/javascript">
-              (function() {
-                var viewport = document.querySelector('.impacts-viewport');
-                if (!viewport) return;
-                var track = viewport.querySelector('.impacts-track');
-                var prevBtn = viewport.querySelector('.impacts-button--prev');
-                var nextBtn = viewport.querySelector('.impacts-button--next');
-                var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                var items = Array.prototype.slice.call(track.querySelectorAll('.impact-item'));
-                if (prefersReducedMotion || items.length <= 1) return;
+  <h2>Bio</h2>
+  <img class="portrait" src="imgs/profile/carson.jpg" alt="Carson Kohlbrenner">
+  <p>I am a PhD student with the <a href="https://hiro-group.ronc.one/people.html">Human Interaction & Robotics Group</a> at the University of Colorado Boulder, advised by <a href="https://alessandro.ronc.one">Alessandro Roncone</a>. I am a robotics researcher, with a focus on whole-body perception and embodied learning. My contributions include procedurally generated artificial skins, a variety of whole-body tactile and proximity sensors, and information theoretic discoveries on contact anticipation for collision avoidance.</p>
+  <p>I am the primary maintainer of the <a href="https://hiro-group.ronc.one/gentacttoolbox">GenTact Toolbox</a>, a whole-body artificial skin generation software that makes fully 3D printable sensors. Before starting my PhD, I was an assistant researcher at <a href="https://www.techapps.com/">Technology Applications Inc.</a> developing thermal straps for aerospace applications.</p>
+  <hr>
+  <p>See my <a href="https://scholar.google.com/citations?hl=en&user=kroi6Q4AAAAJ">Google Scholar</a> page for the most up-to-date list of all my publications.</p>
+  <!-- <ul>
+    <li>2025 - Current: PhD in Robotics, University of Colorado Boulder.</li>
+    <li>2024 - 2025: MSc in Autonomous Systems, University of Colorado Boulder.</li>
+  </ul>
+  <p>When I'm not immersed in research, you can find me enjoying a round of golf, producing music, or enjoying the outdoors. I am always interested in new opportunities and collaborations!</p> -->
+  <hr>
+  <h2>Key Publications: Whole-Body Sensors</h2>
+  <div class="pubs">
+    <span>[ICRA 2026]</span>
+    <span>Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors, <i>C. Kohlbrenner, A. Soukhovei, C. Escobedo, N. Nechyporenko and A. Roncone</i> (<a class="ext" href="https://ieeexplore.ieee.org/abstract/document/11695936" target="_blank" rel="noreferrer">Paper</a>)</span>
+    <span>[ICRA 2025]</span>
+    <span>Gentact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D-Printed Whole-Body Artificial Skins, <i>C. Kohlbrenner, C. Escobedo, S. Bae, A. Dickhans, and A. Roncone</i> (<a class="ext" href="https://ieeexplore.ieee.org/abstract/document/11128675" target="_blank" rel="noreferrer">Paper</a>)</span>
+    <span>[Humanoids 2026]</span>
+    <span>Toward Geometry-Scalable Whole-Body Touch for Humanoids: A 3D-Printed Conformal EIT Skin, <i>H. Chen, C. Kohlbrenner, J. Kubik, L. Rustler, A. Dickhans, K. Bartunek, A. Roncone, H. Lee, and M. Hoffmann</i></span>
+    <span>[MSc Thesis]</span>
+    <span>Procedurally Generated Whole-Body Artificial Skins for Robot Applications, <i>C. Kohlbrenner</i> (<a class="ext" href="https://www.proquest.com/openview/5ccff5ba3574d8affc5f542da853b243/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank" rel="noreferrer">Paper</a>)</span>
+  </div>
+  <hr>
 
-                var totalItems = items.length;
-                var currentIndex = 1; // Start at second element
-                var direction = 1; // 1 = forward, -1 = backward
-                var intervalId = null;
+  <h2>Key Publications: Embodied Information Theory</h2>
+  <div class="pubs">
+    <span>[ICLR 2027]</span>
+    <span>Move, Don't Think: Sample-Efficient Collision Avoidance with Lossy Proximity Sensors, <i>C. Kohlbrenner, N. Pudasaini, W. Xie, N. Sivagnanadasan, N. Correll, and A. Roncone</i>, (In Review)</span>
+  </div>
+  <hr>
 
-                // Get CSS values dynamically for responsive support
-                function getItemWidth() {
-                  // Use offsetWidth to get layout width (unaffected by scale transform)
-                  return items[0] ? items[0].offsetWidth : 200;
-                }
 
-                function getGap() {
-                  // Check if mobile breakpoint (matches CSS @media max-width: 600px)
-                  return window.innerWidth <= 600 ? 16 : 24;
-                }
+  <h2>Awards</h2>
+  <ul>
+    <li>2026: Best Paper Award, ICRA 2026 Towards Large-Area Tactile Sensing Skins Workshop</li>
+    <li>2026: Outstanding Paper Award, University of Colorado Boulder.</li>
+    <!-- <li>2025: Student Travel Grant, University of Colorado Boulder.</li> -->
+    <li>2020: Sewall Esteemed Scholars Recipient, University of Colorado Boulder.</li>
+  </ul>
+  <hr>
 
-                function stepWidth() {
-                  return getItemWidth() + getGap();
-                }
-
-                function centerOffset() {
-                  var viewportWidth = viewport.getBoundingClientRect().width;
-                  return (viewportWidth - getItemWidth()) / 2;
-                }
-
-                function updateActiveClasses() {
-                  items.forEach(function(item, idx) {
-                    item.classList.remove('is-active', 'is-side');
-                    if (idx === currentIndex) {
-                      item.classList.add('is-active');
-                    } else if (idx === currentIndex - 1 || idx === currentIndex + 1) {
-                      item.classList.add('is-side');
-                    }
-                  });
-                }
-
-                function goTo(index) {
-                  var offset = centerOffset() - (index * stepWidth());
-                  track.style.transform = 'translateX(' + offset + 'px)';
-                  updateActiveClasses();
-                }
-
-                function advance() {
-                  // Move in current direction
-                  currentIndex += direction;
-                  
-                  // Reverse direction at boundaries
-                  if (currentIndex >= totalItems - 1) {
-                    currentIndex = totalItems - 1;
-                    direction = -1;
-                  } else if (currentIndex <= 0) {
-                    currentIndex = 0;
-                    direction = 1;
-                  }
-                  
-                  goTo(currentIndex);
-                }
-
-                function next() {
-                  if (currentIndex < totalItems - 1) {
-                    currentIndex += 1;
-                    goTo(currentIndex);
-                  }
-                }
-                
-                function prev() {
-                  if (currentIndex > 0) {
-                    currentIndex -= 1;
-                    goTo(currentIndex);
-                  }
-                }
-
-                function startAuto() { intervalId = setInterval(advance, 5000); }
-                function stopAuto() { if (intervalId) { clearInterval(intervalId); intervalId = null; } }
-
-                nextBtn.addEventListener('click', function() { stopAuto(); next(); direction = 1; startAuto(); });
-                prevBtn.addEventListener('click', function() { stopAuto(); prev(); direction = -1; startAuto(); });
-
-                // keep alignment correct on resize
-                window.addEventListener('resize', function() { goTo(currentIndex); });
-
-                // Initial setup
-                goTo(currentIndex);
-                startAuto();
-              })();
-            </script>
-          </td>
-        </tr>
-      </tbody></table>
-
-      <!-- Publications Section -->
-      {% assign journal_papers = site.data.papers | where: "type", "journal" %}
-      {% assign conference_papers = site.data.papers | where: "type", "conference" %}
-      {% assign workshop_papers = site.data.papers | where: "type", "workshop" %}
-      {% assign preprint_papers = site.data.papers | where: "type", "preprint" %}
-      {% assign report_papers = site.data.papers | where: "type", "report" %}
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2>Publications</h2>
-          </td>
-        </tr>
-      </tbody></table>
-
-      {% if journal_papers.size > 0 %}
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Journal Papers</h3></td></tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% include paper_section.html papers=journal_papers %}
-      </tbody></table>
-      {% endif %}
-
-      {% if conference_papers.size > 0 %}
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Conference Papers</h3></td></tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% include paper_section.html papers=conference_papers %}
-      </tbody></table>
-      {% endif %}
-
-      {% if workshop_papers.size > 0 %}
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Workshop Papers</h3></td></tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% include paper_section.html papers=workshop_papers %}
-      </tbody></table>
-      {% endif %}
-
-      {% if preprint_papers.size > 0 %}
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Preprints</h3></td></tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% include paper_section.html papers=preprint_papers %}
-      </tbody></table>
-      {% endif %}
-
-      {% if report_papers.size > 0 %}
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr><td style="padding:4px 20px;width:100%;vertical-align:middle"><h3>Technical Reports</h3></td></tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        {% include paper_section.html papers=report_papers %}
-      </tbody></table>
-      {% endif %}
-
-      <!-- Footer -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;text-align:center">
-            <br>
-            <p style="font-size:small;">
-              Site template built by <a href="https://github.com/jonbarron">Jon Barron</a>.
-            </p>
-          </td>
-        </tr>
-      </tbody></table>
-    </td>
-  </tr>
-</tbody></table>
+  <!-- <h2>News</h2>
+  <ul>
+    <li>2026: Outstanding Paper Award, CU Boulder Graduate Awards, Boulder, Colorado.</li>
+    <li>2025: <a href="https://hiro-group.ronc.one/">Live Demo</a>, RMAIIG 2025, Boulder, Colorado.</li>
+    <li>2025: <a href="https://hiro-group.ronc.one/">Live Demo</a>, Dr. Roncone's Tenure Talk, University of Colorado Boulder.</li>
+    <li>2025: <a href="https://x.com/adcock_brett/status/1941891039330988359">Community Recognition (X)</a>, Brett Adcock, Founder and CEO of Figure AI.</li>
+    <li>2025: <a href="https://hiro-group.ronc.one/">Paper Presentation</a>, ICRA 2025, Atlanta, Georgia.</li>
+  </ul> -->
+</div>
+</body>
+</html>
